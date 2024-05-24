@@ -1,3 +1,9 @@
+-- Kreiranje baze podataka
+CREATE DATABASE myrecipes;
+
+-- Korišćenje baze podataka
+USE myrecipes;
+
 -- Kreiranje tabele za korisnike (users)
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
