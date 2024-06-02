@@ -1,5 +1,3 @@
--- Kreiranje baze podataka
-CREATE DATABASE myrecipes;
 
 -- Korišćenje baze podataka
 USE myrecipes;
@@ -14,20 +12,19 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Kreiranje tabele za recepte
+-- Kreiranje tabele za recepte (recipes)
 CREATE TABLE recipes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
     description TEXT,
     instructions TEXT,
     user_id INT,
-    image VARCHAR(255), -- Dodao sam polje za putanju slike
+    image VARCHAR(255), -- Polje za putanju slike
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
--- Kreiranje tabele za recenzije recepata
+-- Kreiranje tabele za recenzije recepata (recipe_reviews)
 CREATE TABLE recipe_reviews (
     id INT AUTO_INCREMENT PRIMARY KEY,
     recipe_id INT,

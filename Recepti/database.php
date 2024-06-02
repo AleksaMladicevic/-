@@ -2,7 +2,7 @@
 // Podešavanja baze podataka
 $host = "localhost";
 $username = "root";
-$password = ""; // Ostaviti prazno ako nema šifre
+$password = ""; 
 $database = "myrecipes";
 
 // Kreiranje konekcije
